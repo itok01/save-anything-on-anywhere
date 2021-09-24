@@ -1,6 +1,6 @@
 # Save Anything on Anywhere
 
-You can save your secret on any website to your browser.
+You can save manually your passwords, backup keys, and last night's dinner, ... anything your browser!
 
 Usage:
 
@@ -8,5 +8,3 @@ Usage:
 2. Then open dialog for inputting username and password.
 3. Input username and password that you want to save.
 4. Click submit button. (The information you inputted will not sent anywhere.)
-
-You can save your passwords, backup keys, and last night's dinner, ... anything!

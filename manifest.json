@@ -1,7 +1,7 @@
 {
   "name": "Save Anything on Anywhere",
   "version": "1.0.0",
-  "description": "You can save your secret on any website to your browser.",
+  "description": "You can save manually your passwords, backup keys, and last night's dinner, ... anything your browser!",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
