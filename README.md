@@ -1,6 +1,8 @@
 # Save Anything on Anywhere
 
-You can save manually your passwords, backup keys, and last night's dinner, ... anything your browser!
+You can save manually your passwords, backup keys, and last night's dinner, ... anything your Google Password Manager!
+
+You can check your saved password on `chrome://settings/passwords`.
 
 Usage:
 
