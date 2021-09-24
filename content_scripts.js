@@ -13,7 +13,6 @@ formDialog.onclick = (e) => {
         e.target.close();
     }
 };
-document.body.appendChild(formDialog);
 
 
 const form = document.createElement('form');
@@ -84,13 +83,19 @@ submitButton.onclick = () => {
     formDialog.close();
     usernameInput.value = '';
     passwordInput.value = '';
+    document.body.removeChild(formDialog);
 };
 form.appendChild(submitButton);
 
 chrome.runtime.onMessage.addListener(() => {
+    if (formDialog) {
+        document.body.appendChild(formDialog);
+    }
+
     if (!formDialog.open) {
         formDialog.showModal();
     } else {
         formDialog.close();
+        document.body.removeChild(formDialog);
     }
 });
