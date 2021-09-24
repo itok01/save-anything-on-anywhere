@@ -1,5 +1,5 @@
 const formDialog = document.createElement('dialog');
-formDialog.onclick = (e) => {
+const closeFormDialogOnClicked = (e) => {
     const rect = e.target.getBoundingClientRect();
 
     const clickedInDialog = (
@@ -84,6 +84,7 @@ submitButton.onclick = () => {
     usernameInput.value = '';
     passwordInput.value = '';
     document.body.removeChild(formDialog);
+    formDialog.removeEventListener("click", closeFormDialogOnClicked);
 };
 form.appendChild(submitButton);
 
@@ -94,8 +95,10 @@ chrome.runtime.onMessage.addListener(() => {
 
     if (!formDialog.open) {
         formDialog.showModal();
+        formDialog.addEventListener("click", closeFormDialogOnClicked);
     } else {
         formDialog.close();
         document.body.removeChild(formDialog);
+        formDialog.removeEventListener("click", closeFormDialogOnClicked);
     }
 });
